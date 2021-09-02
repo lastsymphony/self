@@ -71,9 +71,9 @@ const _reminder = JSON.parse(fs.readFileSync("./database/reminder.json"));
 
 banChats = true;
 offline = false;
-targetpc = "6283152753417";
-owner = "6283152753417";
-fake = "YOGIPW";
+targetpc = "6289670394574";
+owner = "6289670394574";
+fake = "LastSymp";
 thumb = fs.readFileSync("./stik/thumb.jpeg");
 numbernye = "0";
 waktu = "-";
@@ -311,7 +311,7 @@ module.exports = client = async (client, mek) => {
 
     //MESS
     mess = {
-      wait: "Otewe",
+      wait: "Tunggu Sebentar",
       success: "Berhasil!",
       wrongFormat: "Format salah, coba liat lagi di menu",
       error: {
@@ -686,7 +686,7 @@ module.exports = client = async (client, mek) => {
         heheh = ms(Date.now() - waktu);
         client.sendMessage(
           mek.key.remoteJid,
-          `@${owner} Sedang Offline!\n\n*Alasan :* ${alasan}\n*Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu\n\nSilahkan Hubungi Lagi Nanti`,
+          `@${owner} Sedang Offline!\n\n*Alasan :* ${alasan}\n*Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu\n\nSilahkan Hubungi Lagi Nanti\n\nAUTO RESPON BY LastSymp`,
           MessageType.text,
           {
             contextInfo: {
@@ -721,7 +721,7 @@ module.exports = client = async (client, mek) => {
                   heheh = ms(Date.now() - waktu);
                   client.sendMessage(
                     mek.key.remoteJid,
-                    `@${owner} Sedang Offline!\n\n *Alasan :* ${alasan}\n *Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu\n\nSilahkan Hubungi Lagi Nanti`,
+                    `@${owner} Sedang Offline!\n\n *Alasan :* ${alasan}\n *Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu\n\nSilahkan Hubungi Lagi Nanti\n\nAUTO RESPON BY LastSymp `,
                     MessageType.text,
                     {
                       contextInfo: {
@@ -877,7 +877,7 @@ module.exports = client = async (client, mek) => {
     if (isGroup && isAntilink && !mek.key.fromMe) {
       if (budy.includes("://chat.whatsapp.com/")) {
         if (isGroupAdmins) return reply("admin bebas");
-        reply("ANTILINK DETECTED!! MAAF ANDA AKAN DIKICK ;V");
+        reply("ANTILINK DETECTED!! MAAF ANDA AKAN DIKICK");
         client.groupRemove(from, [sender]);
       }
     }
@@ -907,7 +907,7 @@ module.exports = client = async (client, mek) => {
     if (isGroup && isAntivirtex && !mek.key.fromMe) {
       if (budy.length > 700) {
         if (isGroupAdmins) return reply("admin bebas");
-        reply("ANTIVIRTEX DETECTED!! MAAF ANDA AKAN DIKICK ;V");
+        reply("ANTIVIRTEX DETECTED!! MAAF ANDA AKAN DIKICK");
         client.groupRemove(from, sender);
       }
     }
@@ -915,7 +915,7 @@ module.exports = client = async (client, mek) => {
       if (budy.includes("://chat.whatsapp.com/")) {
         console.log(
           color("[AUTO-JOIN]", "red"),
-          color("YAHAHAHHAHAH", "white")
+          color("haduh", "white")
         );
         client.query({
           json: [
@@ -952,7 +952,6 @@ module.exports = client = async (client, mek) => {
 ⦿ Jam : ${jam}
 ⦿ Hari : ${week} ${weton}
 ⦿ Tanggal : ${date}
-${readmore}
 
 *OWNER*
 • ${prefix}off
@@ -967,7 +966,8 @@ ${readmore}
 • ${prefix}term <code>
 • ${prefix}eval <code>
 • ${prefix}colongsw [reply sw]
-    
+${readmore}
+
 *GRUP*
 • ${prefix}grup [3 Button]
 • ${prefix}promote <reply chat member>
@@ -1075,7 +1075,7 @@ ${readmore}
 • Total Hit : ${totalhit} Hit
 • Total Chat : ${totalchat.length} Chat
 `;
-        sendButImage(from, menu, "Jangan lupa follow ig @yogiprwaa", thumb, [
+        sendButImage(from, menu, "LastSymphony - SelfBot", thumb, [
           {
             buttonId: `${prefix}ping`,
             buttonText: {
@@ -1094,7 +1094,7 @@ ${readmore}
 
         break;
       case "owner":
-        sendKontak(from, owner, "YogiPw", "Sibuk");
+        sendKontak(from, owner, "LastSymp", "Busy");
         break;
       //------------------< Sticker Cmd >-------------------
       case "addcmd":
@@ -1158,14 +1158,14 @@ ${readmore}
             {
               buttonId: `${prefix}antilink on`,
               buttonText: {
-                displayText: `on`,
+                displayText: `On ✔️`,
               },
               type: 1,
             },
             {
               buttonId: `${prefix}antilink off`,
               buttonText: {
-                displayText: `off`,
+                displayText: `Off ❌`,
               },
               type: 1,
             },
@@ -2140,7 +2140,7 @@ Reminder berhasil diaktifkan!
           client.sendMessage(sender, fs.readFileSync(owgi), "videoMessage", {
             caption: q,
           });
-          reply("Sukses");
+          reply("Tersimpan DiGallery");
           fs.unlinkSync(owgi);
         } else {
           reply("Reply sw foto / video yg mau dicolong");
